@@ -5,9 +5,25 @@
 
 1. 进程切换的可能时机有哪些？
 
+   时间片用完、被高优先级进程抢先、进入等待状态、进程结束
+
 2. 分析ucore的进程切换代码，说明ucore的进程切换触发时机和进程切换的判断时机都有哪些。
 
+   > 进程基本信息
+
+   > 进程状态信息
+
+   > 进程执行现场保存
+
+   > 进程队列指针
+
 3. ucore的进程控制块数据结构是如何组织的？主要字段分别表示什么？
+
+   > schedule
+
+   > proc_run
+
+   > switch_to
 
 ### 12.2 进程创建
 
@@ -94,7 +110,7 @@ instruction_to_execute = self.proc_info[self.curr_proc][PROC_CODE].pop(0)
  - 调度函数：next_proc
 
 ### 执行实例
-   
+
 #### 例1
 ```
 $./process-simulation.py  -l 5:30:30,5:40:30 -c
